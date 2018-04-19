@@ -32,6 +32,18 @@ void answer() {
   }
 }
 
+void correct() {
+  int A[100], N;
+  int i, j, t, sw = 0, minj;
+  for (int i = 0; i < N; i++) {
+    minj = i;
+    for (int j = 0; j < N; j++) {
+      if (A[j] < A[minj]) minj = j;
+    }
+    t = A[i]; A[i] = A[minj]; A[minj] = t;
+  }
+}
+
 int main() {
   answer();
   return 0;
